@@ -50,11 +50,11 @@ export class MenuComponent implements OnInit {
     }
 
     ngOnInit() {
-        let userType;
+        let userType=[1001];
         // 如果没有用户类型，说明没有登录，直接跳转登录页面
         if (!this.sessionService.getItem('roles')) {
-            this.router.navigate(['/']);
-            return;
+            // this.router.navigate(['/']);
+            // return;
         } else {
             this.hardImg = this.sessionService.getItem('hardImg');
             userType = this.sessionService.getItem('roles').split(',').map(item => {

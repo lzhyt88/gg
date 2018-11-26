@@ -4,7 +4,7 @@ import { UserService } from '../../share/restServices/user.service';
 import { NzMessageService } from 'ng-zorro-antd';
 import { RegExpService } from '../../share/services/reg-exp.service';
 import { Router } from '@angular/router';
-import { CodeDataService } from '../../share/services/code-data.service';
+// import { CodeDataService } from '../../share/services/code-data.service';
 import { SessionService } from '../../share/services/session.service';
 
 @Component({
@@ -21,7 +21,7 @@ export class LoginComponent implements OnInit {
     ss = 1;
     constructor(
         private sessionService: SessionService,
-        private codeDataService: CodeDataService,
+        // private codeDataService: CodeDataService,
         private fb: FormBuilder,
         private router: Router,
         private _message: NzMessageService,
@@ -33,7 +33,7 @@ export class LoginComponent implements OnInit {
     }
     ngOnInit(): void {
         this.panduan();
-        this.codeDataService.getData();
+        // this.codeDataService.getData();
     }
     panduan(): void {
         if (this.sessionService.getItem('remember') === 'true') {

@@ -18,6 +18,7 @@ export class PermissionGuardService implements CanActivate {
     return false;
   }
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
+    return true;
     // token过期跳转登录
     if (!this.sessionService.getItem('token')) {
       this.checkLogin();

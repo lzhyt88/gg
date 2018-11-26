@@ -33,38 +33,38 @@ export class CodeDataService {
     }
   }
   getData() {
-    this.codeService.list({
-      params: {
-        params2: 1,
-        params3: 1000
-      },
-      data: {}
-    })
-      .subscribe(response => {
-        if (response.code === 200) {
-          this.codeObjList = {};
-          this.codeObj = {};
-          this.codeList = response.data.pageData;
+    // this.codeService.list({
+    //   params: {
+    //     params2: 1,
+    //     params3: 1000
+    //   },
+    //   data: {}
+    // })
+    //   .subscribe(response => {
+    //     if (response.code === 200) {
+    //       this.codeObjList = {};
+    //       this.codeObj = {};
+    //       this.codeList = response.data.pageData;
 
-          this.codeList.forEach(item => {
-            this.codeObj[item.code] = item.name;
-            if (this.codeObjList[item.groups]) {
-              this.codeObjList[item.groups].push(Object.assign({
-                value: item.code,
-                label: item.name
-              }, item));
-            } else {
-              this.codeObjList[item.groups] = [Object.assign({
-                value: item.code,
-                label: item.name
-              }, item)];
-            }
-          });
-          this.sessionService.setItem('codeObjList', JSON.stringify(this.codeObjList));
-          this.sessionService.setItem('codeList', JSON.stringify(this.codeList));
-          this.sessionService.setItem('codeObj', JSON.stringify(this.codeObj));
-        }
-      });
+    //       this.codeList.forEach(item => {
+    //         this.codeObj[item.code] = item.name;
+    //         if (this.codeObjList[item.groups]) {
+    //           this.codeObjList[item.groups].push(Object.assign({
+    //             value: item.code,
+    //             label: item.name
+    //           }, item));
+    //         } else {
+    //           this.codeObjList[item.groups] = [Object.assign({
+    //             value: item.code,
+    //             label: item.name
+    //           }, item)];
+    //         }
+    //       });
+    //       this.sessionService.setItem('codeObjList', JSON.stringify(this.codeObjList));
+    //       this.sessionService.setItem('codeList', JSON.stringify(this.codeList));
+    //       this.sessionService.setItem('codeObj', JSON.stringify(this.codeObj));
+    //     }
+    //   });
   }
   getGroup(group) {
     if (this.codeObjList[group]) {
