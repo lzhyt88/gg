@@ -32,13 +32,17 @@
               }
             ],
             "styles": [
-              "node_modules/ng-zorro-antd/ng-zorro-antd.min.css",
+              
               "src/themes/themeEnter.less",
               "src/styles.less",
-              "node_modules/cropperjs/dist/cropper.css"
+              "node_modules/cropperjs/dist/cropper.css",
+              "src/assets/libs/prism/prism.css"
             ],
             "scripts": [
-              "node_modules/cropperjs/dist/cropper.min.js"
+              "node_modules/cropperjs/dist/cropper.min.js",
+              "src/assets/libs/uEditor/ueditor.config.js",
+              "src/assets/libs/uEditor/ueditor.all.js",
+              "src/assets/libs/prism/prism.js"
             ]
           },
           "configurations": {

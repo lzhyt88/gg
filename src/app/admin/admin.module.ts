@@ -18,18 +18,7 @@ export const routes: Routes = [
           name: 'Angular动态加载组件',
           // hideChild: true,
           roles: [1001],
-          menu: true
-        },
-        canActivate: [PermissionGuardService]
-      },
-      {
-        path: 'vpn',
-        loadChildren: './vpn/vpn.module#VpnModule',
-        data: {
-          name: 'vpn',
-          // hideChild: true,
-          roles: [1001],
-          menu: true
+          // menu: true
         },
         canActivate: [PermissionGuardService]
       },
@@ -58,8 +47,8 @@ export const routes: Routes = [
         path: 'news',
         loadChildren: './news/news.module#NewsModule',
         data: {
-          name: '文案管理',
-          roles: [1001],
+          name: '新闻管理',
+          roles: [1001, 1004],
           menu: true
         },
         canActivate: [PermissionGuardService]
