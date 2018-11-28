@@ -1,4 +1,22 @@
 <div class="menuCpl" id="menuCpl">
+  <div class="logoHead">
+    <div class="right">
+      <nz-dropdown [nzPlacement]="'bottomRight'">
+        <a class="ant-dropdown-link" nz-dropdown>
+          <span class="overflow" [title]='userName'>
+            <img class="hardImg" [src]="'/v1/file/img/'+hardImg" alt="">
+            <b> {{userName}}</b>
+          </span>
+          <i class="anticon anticon-down"></i>
+        </a>
+        <ul nz-menu>
+          <li *ngFor="let item of rightDown let i=index" nz-menu-item (click)="downChange(item)">
+            <span>{{item.label}}</span>
+          </li>
+        </ul>
+      </nz-dropdown>
+    </div>
+  </div>
   <div class="header">
     <div>
       <div class="logo">
@@ -19,23 +37,6 @@
             </ul>
           </li>
         </ul>
-      </div>
-      <div class="right">
-        <nz-dropdown [nzPlacement]="'bottomRight'">
-          <a class="ant-dropdown-link" nz-dropdown>
-            <span class="overflow" [title]='userName'>
-              <img class="hardImg" [src]="'/v1/file/img/'+hardImg" alt="">
-              <b> {{userName}}</b>
-            </span>
-            <i class="anticon anticon-down"></i>
-          </a>
-          <ul nz-menu>
-            <li *ngFor="let item of rightDown let i=index" nz-menu-item (click)="downChange(item)">
-              <span>{{item.label}}</span>
-            </li>
-
-          </ul>
-        </nz-dropdown>
       </div>
     </div>
   </div>

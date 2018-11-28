@@ -32,7 +32,7 @@ export class IndexComponent implements OnInit {
 
   ngOnInit() {
     this.codeObj = this.codeDataService.codeObj;
-    this.getList();
+    // this.getList();
   }
 
   getList(num?) {

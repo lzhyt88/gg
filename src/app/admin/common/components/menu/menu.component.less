@@ -1,14 +1,6 @@
 @import "../../../../../themes/default/theme";
 .menuCpl{ height: 100%;
-  >.header{ height: 60px; width: 100%;
-    /* background-image: linear-gradient(to right, #7BBFEA, #4BB2F4);*/
-    background: #7764CA;
-    margin: 0 auto;
-    line-height: 60px; color:lighten(@menuText,50%);
-    a{ color: lighten(@menuText,50%);}
-    .logo{ width: 260px; position: absolute; height: 60px;
-      left: 0; top:0; text-align: center;
-    }
+  .logoHead{height: 60px; width: 100%;background: #CF2323;
     .right{ position: absolute; right: 50px; top:0; line-height: 60px;
       /deep/.el-dropdown{ color: lighten(@menuText,50%);}
       /deep/.el-icon-caret-bottom{ display: none;}
@@ -29,6 +21,15 @@
         float: left;
         &:hover{ opacity:1;}
       }
+    }}
+  >.header{ height: 60px; width: 100%;
+    /* background-image: linear-gradient(to right, #7BBFEA, #4BB2F4);*/
+    background: #B41A1A;
+    margin: 0 auto;
+    line-height: 60px; color:lighten(@menuText,50%);
+    a{ color: lighten(@menuText,50%);}
+    .logo{ width: 260px; position: absolute; height: 60px;
+      left: 0; top:0; text-align: center;
     }
     .topMenu{ padding: 0 130px 0 200px; height: 100%;}
     >div{ width:100%; position: relative; height: 100%;}
@@ -119,8 +120,7 @@
     width: -moz-calc(~"100% - 200px");
     width: -webkit-calc(~"100% - 200px");
     width: calc(~"100% - 200px");
-    overflow-y: auto;
-    background: #f3faff;
+    // overflow-y: auto;
   }
   >.menuTopBox{
     width: 100%; /*写给不支持calc()的浏览器*/

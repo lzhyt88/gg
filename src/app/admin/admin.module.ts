@@ -23,6 +23,17 @@ export const routes: Routes = [
         canActivate: [PermissionGuardService]
       },
       {
+        path: 'index',
+        loadChildren: './index/index.module#IndexModule',
+        data: {
+          name: '首页',
+          // hideChild: true,
+          roles: [1001],
+          menu: true
+        },
+        canActivate: [PermissionGuardService]
+      },
+      {
         path: 'user',
         loadChildren: './user/user.module#UserModule',
         data: {

@@ -24,7 +24,7 @@ export class PermissionGuardService implements CanActivate {
       this.checkLogin();
       return false;
     }
-    const roleIds = this.sessionService.getItem('roles') ? this.sessionService.getItem('roles').split(',') : []
+    const roleIds = this.sessionService.getItem('roles') ? this.sessionService.getItem('roles').split(',') : [];
     let key = false;
 
     if (route.data.roles && route.data.roles.length) {

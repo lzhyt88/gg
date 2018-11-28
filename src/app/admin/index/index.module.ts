@@ -3,8 +3,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { ShareModule } from '../../share/share.module';
 
 import { IndexComponent } from './index/index.component';
-import { AddComponent } from './add/add.component';
-import { UpdateComponent } from './update/update.component';
 import { PermissionGuardService } from '../../share/services/permission-guard.service';
 
 
@@ -19,27 +17,6 @@ export const routes: Routes = [
         },
         canActivate: [PermissionGuardService]
     },
-    {
-        path: 'add',
-        component: AddComponent,
-        data: {
-            name: '添加用户',
-            roles: [1001]
-        },
-        canActivate: [PermissionGuardService]
-    },
-    {
-        path: 'update/:id',
-        component: UpdateComponent,
-        data: {
-            name: '编辑用户',
-            roles: [1001]
-        },
-        canActivate: [PermissionGuardService]
-    },
-
-
-
 ];
 
 
@@ -48,7 +25,7 @@ export const routes: Routes = [
         ShareModule,
         RouterModule.forChild(routes)
     ],
-    declarations: [IndexComponent, UpdateComponent, AddComponent],
+    declarations: [IndexComponent],
     providers: [],
 })
-export class UserModule { }
+export class IndexModule { }
