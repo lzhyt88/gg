@@ -34,6 +34,17 @@ export const routes: Routes = [
         canActivate: [PermissionGuardService]
       },
       {
+        path: 'partyNews',
+        loadChildren: './partyNews/partyNews.module#PartyNewsModule',
+        data: {
+          name: '党建要闻',
+          // hideChild: true,
+          roles: [1001],
+          menu: true
+        },
+        canActivate: [PermissionGuardService]
+      },
+      {
         path: 'user',
         loadChildren: './user/user.module#UserModule',
         data: {
