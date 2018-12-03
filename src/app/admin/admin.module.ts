@@ -45,6 +45,17 @@ export const routes: Routes = [
         canActivate: [PermissionGuardService]
       },
       {
+        path: 'equipment',
+        loadChildren: './equipment/equipment.module#EquipmentModule',
+        data: {
+          name: '信息查询',
+          // hideChild: true,
+          roles: [1001],
+          menu: true
+        },
+        canActivate: [PermissionGuardService]
+      },
+      {
         path: 'user',
         loadChildren: './user/user.module#UserModule',
         data: {
