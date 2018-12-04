@@ -56,6 +56,17 @@ export const routes: Routes = [
         canActivate: [PermissionGuardService]
       },
       {
+        path: 'quality',
+        loadChildren: './quality/quality.module#QualityModule',
+        data: {
+          name: '质量专栏',
+          // hideChild: true,
+          roles: [1001],
+          menu: true
+        },
+        canActivate: [PermissionGuardService]
+      },
+      {
         path: 'user',
         loadChildren: './user/user.module#UserModule',
         data: {
