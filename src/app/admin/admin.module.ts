@@ -56,6 +56,17 @@ export const routes: Routes = [
         canActivate: [PermissionGuardService]
       },
       {
+        path: 'work',
+        loadChildren: './work/work.module#WorkModule',
+        data: {
+          name: '工作动态',
+          // hideChild: true,
+          roles: [1001],
+          menu: true
+        },
+        canActivate: [PermissionGuardService]
+      },
+      {
         path: 'quality',
         loadChildren: './quality/quality.module#QualityModule',
         data: {
@@ -67,42 +78,25 @@ export const routes: Routes = [
         canActivate: [PermissionGuardService]
       },
       {
-        path: 'user',
-        loadChildren: './user/user.module#UserModule',
+        path: 'logistics',
+        loadChildren: './logistics/logistics.module#LogisticsModule',
         data: {
-          name: '用户管理',
+          name: '后勤保障',
+          roles: [1001],
+          menu: true,
+        },
+        canActivate: [PermissionGuardService]
+      },
+      {
+        path: 'download',
+        loadChildren: './download/download.module#DownloadModule',
+        data: {
+          name: '资料下载',
           // hideChild: true,
           roles: [1001],
           menu: true
         },
         canActivate: [PermissionGuardService]
-      },
-      {
-        path: 'tools',
-        loadChildren: './tools/tools.module#ToolsModule',
-        data: {
-          name: '基础数据',
-          roles: [1001],
-          menu: true
-        },
-        canActivate: [PermissionGuardService]
-      },
-      {
-        path: 'news',
-        loadChildren: './news/news.module#NewsModule',
-        data: {
-          name: '新闻管理',
-          roles: [1001, 1004],
-          menu: true
-        },
-        canActivate: [PermissionGuardService]
-      },
-      {
-        path: 'self',
-        loadChildren: './self/self.module#SelfModule',
-        data: {
-          name: '个人中心'
-        }
       },
     ]
   }
