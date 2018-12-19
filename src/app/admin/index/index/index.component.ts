@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -7,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
     styleUrls: ['../../common/style/list.less', './index.component.less']
 })
 export class IndexComponent implements OnInit {
+    titOption = [{ 'border-bottom': '2px solid #CF2323', 'margin': '0 3px' }, {}, {}]; // 信息查询标题样式
     dataSet = [
         {
             key: '1',
@@ -38,10 +40,17 @@ export class IndexComponent implements OnInit {
     level = null;
     checked = true;
     constructor(
-
+        private router: Router,
     ) { }
 
     ngOnInit() {
-
+    }
+    titOptionOK(i) {
+        // 信息查询标题点击样式修改
+        this.titOption = [{}, {}, {}];
+        this.titOption[i] = {'border-bottom': '2px solid #CF2323', 'margin': '0 3px'};
+    }
+    jump(i, id) { // 跳转
+        this.router.navigate(['/admin/' + i + '/' + id]);
     }
 }

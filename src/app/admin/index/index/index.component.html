@@ -2,17 +2,13 @@
   <div class="left">
     <div class="block">
       <div class="title">
-        <div class="titleRed">
-          工作动态
-        </div>
+        <div class="titleRed">工作动态</div>
         <div class="more">
-          <div class="moreWord">
-            更多 >
-          </div>
+          <div class="moreWord" (click)="jump('work','')">更多 ></div>
         </div>
       </div>
       <div class="window">
-          
+
       </div>
       <ul class="content">
         <li *ngFor="let i of data1" class="contentData">
@@ -22,19 +18,13 @@
       </ul>
     </div>
     <div class="block">
-      <div class="title">
-        <div class="titleRed">
-          信息查询
-        </div>
-        <div class="more">
-          <div class="keyword">
-            <span>设备资产</span>
-            <div class="circular"></div>
-            <span>供应商</span>
-            <div class="circular"></div>
-            <span>招投标机构</span>
-          </div>
-          <div class="moreWord">更多 ></div>
+      <div class="quality_title">
+        <div class="quality_titleRed">信息查询</div>
+        <div class="quality_titleOption" [ngStyle]="titOption[0]" (click)="titOptionOK(0)">设备资产</div>
+        <div class="quality_titleOption" [ngStyle]="titOption[1]" (click)="titOptionOK(1)">供应商</div>
+        <div class="quality_titleOption" [ngStyle]="titOption[2]" (click)="titOptionOK(2)">招投标机构</div>
+        <div class="quality_more">
+          <div class="quality_moreWord"> 更多 ></div>
         </div>
       </div>
       <div class="query">
@@ -79,13 +69,9 @@
     </div>
     <div class="block">
       <div class="title">
-        <div class="titleRed">
-          市场信息
-        </div>
+        <div class="titleRed">市场信息</div>
         <div class="more">
-          <div class="moreWord">
-            更多 >
-          </div>
+          <div class="moreWord" (click)="jump('market','')">更多 ></div>
         </div>
       </div>
       <div class="marketQuota">
@@ -107,22 +93,12 @@
     </div>
     <div class="quality_block">
       <div class="quality_title">
-        <div class="quality_titleRed">
-          质量专栏
-        </div>
-        <div class="quality_titleOptionOK">
-          质量公告
-        </div>
-        <div class="quality_titleOption">
-          质量事件
-        </div>
-        <div class="quality_titleOption">
-          质量处理
-        </div>
+        <div class="quality_titleRed">质量专栏</div>
+        <div class="quality_titleOption">质量公告</div>
+        <div class="quality_titleOption">质量事件</div>
+        <div class="quality_titleOption">质量处理</div>
         <div class="quality_more">
-          <div class="quality_moreWord">
-            更多 >
-          </div>
+          <div class="quality_moreWord" (click)="jump('quality','')">更多 ></div>
         </div>
       </div>
       <ul class="lastContent">
@@ -153,13 +129,9 @@
     </div>
     <div class="box">
       <div class="boxTitle">
-        <div class="boxRed">
-          党建要闻
-        </div>
+        <div class="boxRed">党建要闻</div>
         <div class="more">
-          <div class="moreWord">
-            更多 >
-          </div>
+          <div class="moreWord" (click)="jump('partyNews','')">更多 ></div>
         </div>
       </div>
       <ul class="rightContent">
@@ -171,13 +143,9 @@
     </div>
     <div class="box">
       <div class="boxTitle">
-        <div class="boxRed">
-          通知公告
-        </div>
+        <div class="boxRed">通知公告</div>
         <div class="more">
-          <div class="moreWord">
-            更多 >
-          </div>
+          <div class="moreWord" (click)="jump('notice','')">更多 ></div>
         </div>
       </div>
       <ul class="rightContent">
@@ -189,13 +157,9 @@
     </div>
     <div class="box">
       <div class="boxTitle">
-        <div class="boxRed">
-          管理规定
-        </div>
+        <div class="boxRed">管理规定</div>
         <div class="more">
-          <div class="moreWord">
-            更多 >
-          </div>
+          <div class="moreWord" (click)="jump('adminRegula','')">更多 ></div>
         </div>
       </div>
       <ul class="rightContent">
@@ -208,8 +172,9 @@
   </div>
   <div class="quality_block">
     <div class="quality_title">
-      <div class="quality_titleRed">
-        资料下载
+      <div class="quality_titleRed">资料下载</div>
+      <div class="quality_more">
+        <div class="quality_moreWord" style="line-height: 40px" (click)="jump('download','')">更多 ></div>
       </div>
     </div>
     <ul class="lastContent" style="margin-top:35px;">

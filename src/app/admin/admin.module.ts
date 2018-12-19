@@ -67,6 +67,28 @@ export const routes: Routes = [
         canActivate: [PermissionGuardService]
       },
       {
+        path: 'adminRegula',
+        loadChildren: './adminRegula/adminRegula.module#AdminRegulaModule',
+        data: {
+          name: '管理规定',
+          // hideChild: true,
+          roles: [1001],
+          menu: false
+        },
+        canActivate: [PermissionGuardService]
+      },
+      {
+        path: 'notice',
+        loadChildren: './notice/notice.module#NoticeModule',
+        data: {
+          name: '通知公告',
+          // hideChild: true,
+          roles: [1001],
+          menu: false
+        },
+        canActivate: [PermissionGuardService]
+      },
+      {
         path: 'quality',
         loadChildren: './quality/quality.module#QualityModule',
         data: {
@@ -95,6 +117,17 @@ export const routes: Routes = [
           // hideChild: true,
           roles: [1001],
           menu: true
+        },
+        canActivate: [PermissionGuardService]
+      },
+      {
+        path: 'market',
+        loadChildren: './market/market.module#MarketModule',
+        data: {
+          name: '市场信息',
+          // hideChild: true,
+          roles: [1001],
+          menu: false
         },
         canActivate: [PermissionGuardService]
       },
