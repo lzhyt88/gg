@@ -131,6 +131,17 @@ export const routes: Routes = [
         },
         canActivate: [PermissionGuardService]
       },
+      {
+        path: 'self',
+        loadChildren: './self/self.module#SelfModule',
+        data: {
+          name: '个人中心',
+          // hideChild: true,
+          roles: [1001],
+          menu: false
+        },
+        canActivate: [PermissionGuardService]
+      },
     ]
   }
 ];

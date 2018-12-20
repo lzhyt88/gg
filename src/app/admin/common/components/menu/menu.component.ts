@@ -1,7 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import * as tools from '../../../tools/tools.module';
-import * as news from '../../../news/news.module';
-import * as user from '../../../user/user.module';
 import * as logistics from '../../../logistics/logistics.module';
 import { Router } from '@angular/router';
 import { SessionService } from '../../../../share/services/session.service';
